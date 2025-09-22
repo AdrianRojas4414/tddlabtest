@@ -5,6 +5,7 @@ import path from 'path';
 
 const getLatestCommitId = () => {
     const latestCommit = execSync('git rev-parse HEAD').toString().trim();
+    console.log(`Latest Commit ID: ${latestCommit}`);
     return latestCommit;
 };
 
