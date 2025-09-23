@@ -12,6 +12,10 @@ describe("Sumar", () => {
   it("no deberia sumar dos numeros", () => {
     expect(sumar(3, 2)).toEqual(7);
   });
+
+  it("deberia sumar dos numeros", () => {
+    expect(sumar(3, 3)).toEqual(6);
+  });
 });
 
 
