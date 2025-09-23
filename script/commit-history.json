@@ -1,0 +1,21 @@
+[
+  {
+    "sha": "HEAD",
+    "author": "adrian",
+    "commit": {
+      "date": "2025-09-23T15:42:08.000Z",
+      "message": "primero",
+      "url": "https://github.com/AdrianRojas4414/tddlabtest/commit/HEAD"
+    },
+    "stats": {
+      "total": 8,
+      "additions": 8,
+      "deletions": 0,
+      "date": "2025-09-23"
+    },
+    "coverage": 100,
+    "test_count": 3,
+    "failed_tests": 2,
+    "conclusion": "failure"
+  }
+]
