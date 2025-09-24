@@ -5,3 +5,4 @@ describe("Sumar", () => {
     expect(sumar(3, 2)).toEqual(5);
   });
 });
+
