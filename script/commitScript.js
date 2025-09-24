@@ -2,7 +2,6 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import path from 'path';
-import { testId } from './id_test_commit.js';
 
 const getLatestCommitId = () => {
     const latestCommit = execSync('git rev-parse HEAD').toString().trim();
@@ -29,13 +28,13 @@ const updateJsonFile = (commitId, commitName) => {
     const __dirname = path.dirname(__filename);
     const filePath = path.join(__dirname, 'tdd_log.json');
     const commitTimestamp = Date.now();
-    const data = { commitId, commitName, commitTimestamp, testId: testId.getId() };
+    const data = { commitId, commitName, commitTimestamp };
     try {
         const fileData = fs.readFileSync(filePath, 'utf8');
         const existingData = JSON.parse(fileData);
         existingData.push(data);
         fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2));
-        testId.generateNewId();
+        // testId.generateNewId();
     } catch (err) {
         if (err.code === 'ENOENT') {
             fs.writeFileSync(filePath, JSON.stringify([data], null, 2));
