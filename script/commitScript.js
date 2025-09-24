@@ -48,5 +48,3 @@ const updateJsonFile = (commitId, commitName) => {
 const latestCommitId = getLatestCommitId();
 const latestCommitName = getLatestCommitName();
 updateJsonFile(latestCommitId, latestCommitName);
-
-export { getTestID };
