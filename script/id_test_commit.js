@@ -1,16 +1,16 @@
-class Test {
-    constructor(){
-        this.id = 0;
-    }
-    getId(){
-        return this.id;
-    }
-    generateNewId(){
-        this.id += 1;
-        return this.id;
-    }
+// saveId.js
+const fs = require("fs");
+
+function saveId(id) {
+  fs.writeFileSync("id.json", JSON.stringify({ id }));
 }
 
-const testId = new Test();
+function getId() {
+  if (!fs.existsSync("id.json")) return null;
+  const data = fs.readFileSync("id.json", "utf8");
+  return JSON.parse(data).id;
+}
 
-export { testId };
+// Ejemplo:
+saveId(123);
+console.log(getId()); // 123 incluso después de cerrar el programa
