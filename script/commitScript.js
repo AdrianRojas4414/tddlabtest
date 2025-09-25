@@ -15,11 +15,12 @@ const getLatestCommitName = () => {
     return commitName;
 };
 
-const updateJsonFile = (commitId, commitName, testId) => {
+const updateJsonFile = (commitId, commitName) => {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     const filePath = path.join(__dirname, 'tdd_log.json');
     const commitTimestamp = Date.now();
+    let testId = getLastTestId(filePath);
     const data = { commitId, commitName, commitTimestamp, testId };
     try {
         const fileData = fs.readFileSync(filePath, 'utf8');
@@ -38,7 +39,7 @@ const updateJsonFile = (commitId, commitName, testId) => {
 const latestCommitId = getLatestCommitId();
 const latestCommitName = getLatestCommitName();
 
-const __dirname = path.dirname(__filename);
-const outputFilePath = path.join(__dirname, 'tdd_log.json');
-let testId = getLastTestId(outputFilePath);
-updateJsonFile(latestCommitId, latestCommitName, testId);
+// const __dirname = path.dirname(__filename);
+// const outputFilePath = path.join(__dirname, 'tdd_log.json');
+// let testId = getLastTestId(outputFilePath);
+updateJsonFile(latestCommitId, latestCommitName);
