@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url';
 import fs from 'fs';
 import path from 'path';
 import { spawn } from 'cross-spawn';
-// import { testId } from './id_test_commit.js';
+import { getLastTestId } from './id_test_commit.js';
 
 const COMMAND = 'jest';
 const args = ['--json', '--outputFile=./script/report.json'];
@@ -63,25 +63,25 @@ const extractAndAddObject = async (reportFile, tddLogFile, currentTestId) => {
   }
 };
 
-const isACommit = (lastEntry) => {
-  return lastEntry.hasOwnProperty('commitId');
-};
+// const isACommit = (lastEntry) => {
+//   return lastEntry.hasOwnProperty('commitId');
+// };
 
-const getLastTestId = (filePath) => {
-  ensureFileExists(filePath, []);
-  const historyExecutionData = readJSONFile(filePath);
-  const lastEntry = historyExecutionData[historyExecutionData.length - 1];
+// const getLastTestId = (filePath) => {
+//   ensureFileExists(filePath, []);
+//   const historyExecutionData = readJSONFile(filePath);
+//   const lastEntry = historyExecutionData[historyExecutionData.length - 1];
   
-  if (lastEntry) {
-    if (isACommit(lastEntry)) {
-      return lastEntry.testId + 1; // Si el último es un commit, el próximo testId se incrementa
-    } else {
-      return lastEntry.hasOwnProperty('testId') ? lastEntry.testId : 0; // Incrementa el testId
-    }
-  } else {
-    return 0; // Si el archivo está vacío, comienza con testId 0
-  }
-};
+//   if (lastEntry) {
+//     if (isACommit(lastEntry)) {
+//       return lastEntry.testId + 1; // Si el último es un commit, el próximo testId se incrementa
+//     } else {
+//       return lastEntry.hasOwnProperty('testId') ? lastEntry.testId : 0; // Incrementa el testId
+//     }
+//   } else {
+//     return 0; // Si el archivo está vacío, comienza con testId 0
+//   }
+// };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

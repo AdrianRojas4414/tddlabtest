@@ -2,7 +2,7 @@ import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import path from 'path';
-import { getLastTestId } from './tddScript.js';
+import { getLastTestId } from './id_test_commit.js';
 
 const getLatestCommitId = () => {
     const latestCommit = execSync('git rev-parse HEAD').toString().trim();
