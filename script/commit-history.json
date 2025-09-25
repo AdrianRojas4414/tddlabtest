@@ -228,16 +228,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0e00f2bde22fdd38f1f97b4dd406b4ee77d2bec9",
     "author": "BetoHerbas",
     "commit": {
       "date": "2025-09-25T13:56:19.000Z",
       "message": "tdd_log.json modify",
-      "url": "https://github.com/luzhania/TDD_project_test/commit/HEAD"
+      "url": "https://github.com/luzhania/TDD_project_test/commit/0e00f2bde22fdd38f1f97b4dd406b4ee77d2bec9"
     },
     "stats": {
       "total": 6,
       "additions": 6,
+      "deletions": 0,
+      "date": "2025-09-25"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "BetoHerbas",
+    "commit": {
+      "date": "2025-09-25T14:47:32.000Z",
+      "message": "test",
+      "url": "https://github.com/luzhania/TDD_project_test/commit/HEAD"
+    },
+    "stats": {
+      "total": 22,
+      "additions": 22,
       "deletions": 0,
       "date": "2025-09-25"
     },
