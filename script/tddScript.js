@@ -93,4 +93,4 @@ let lastTestId = getLastTestId(outputFilePath);
 
 extractAndAddObject(inputFilePath, outputFilePath, lastTestId);
 
-export { extractAndAddObject, getLastTestId };
+export { extractAndAddObject };
