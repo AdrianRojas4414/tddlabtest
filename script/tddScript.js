@@ -32,7 +32,7 @@ const ensureFileExists = (filePath, initialData) => {
   }
 };
 
-const extractAndAddObject = async (reportFile, tddLogFile, currentTestId) => {
+const extractAndAddObject = async (reportFile, tddLogFile) => {
   try {
     await runCommand(COMMAND, args);
 
@@ -44,6 +44,7 @@ const extractAndAddObject = async (reportFile, tddLogFile, currentTestId) => {
     const totalTests = jsonData.numTotalTests;
     const startTime = jsonData.startTime;
     const success = jsonData.success;
+    let testId = getLastTestId(tddLogFile);
 
     const newReport = {
       numPassedTests: passedTests,
@@ -51,7 +52,7 @@ const extractAndAddObject = async (reportFile, tddLogFile, currentTestId) => {
       numTotalTests: totalTests,
       timestamp: startTime,
       success: success,
-      testId: currentTestId
+      testId: testId
     };
 
     const tddLog = readJSONFile(tddLogFile);
@@ -63,34 +64,12 @@ const extractAndAddObject = async (reportFile, tddLogFile, currentTestId) => {
   }
 };
 
-// const isACommit = (lastEntry) => {
-//   return lastEntry.hasOwnProperty('commitId');
-// };
-
-// const getLastTestId = (filePath) => {
-//   ensureFileExists(filePath, []);
-//   const historyExecutionData = readJSONFile(filePath);
-//   const lastEntry = historyExecutionData[historyExecutionData.length - 1];
-  
-//   if (lastEntry) {
-//     if (isACommit(lastEntry)) {
-//       return lastEntry.testId + 1; // Si el último es un commit, el próximo testId se incrementa
-//     } else {
-//       return lastEntry.hasOwnProperty('testId') ? lastEntry.testId : 0; // Incrementa el testId
-//     }
-//   } else {
-//     return 0; // Si el archivo está vacío, comienza con testId 0
-//   }
-// };
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const inputFilePath = path.join(__dirname, 'report.json');
 const outputFilePath = path.join(__dirname, 'tdd_log.json');
 
-let lastTestId = getLastTestId(outputFilePath);
-
-extractAndAddObject(inputFilePath, outputFilePath, lastTestId);
+extractAndAddObject(inputFilePath, outputFilePath);
 
 export { extractAndAddObject };

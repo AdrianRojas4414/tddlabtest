@@ -1,7 +1,4 @@
-import { fileURLToPath } from 'url';
 import fs from 'fs';
-import path from 'path';
-import { spawn } from 'cross-spawn';
 
 const readJSONFile = (filePath) => {
   const rawData = fs.readFileSync(filePath, 'utf-8');
@@ -39,12 +36,5 @@ const getLastTestId = (filePath) => {
   }
 };
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const outputFilePath = path.join(__dirname, 'tdd_log.json');
-
-
-// extractAndAddObject(inputFilePath, outputFilePath, lastTestId);
 
 export {getLastTestId };
