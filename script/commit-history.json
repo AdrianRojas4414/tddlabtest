@@ -209,17 +209,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "855ad0f9735c0383b156887b2b55a796a177120c",
     "author": "BetoHerbas",
     "commit": {
       "date": "2025-09-25T13:55:28.000Z",
       "message": "Removing tdd_log.json from .gitignore",
-      "url": "https://github.com/luzhania/TDD_project_test/commit/HEAD"
+      "url": "https://github.com/luzhania/TDD_project_test/commit/855ad0f9735c0383b156887b2b55a796a177120c"
     },
     "stats": {
       "total": 11,
       "additions": 10,
       "deletions": 1,
+      "date": "2025-09-25"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "BetoHerbas",
+    "commit": {
+      "date": "2025-09-25T13:56:19.000Z",
+      "message": "tdd_log.json modify",
+      "url": "https://github.com/luzhania/TDD_project_test/commit/HEAD"
+    },
+    "stats": {
+      "total": 6,
+      "additions": 6,
+      "deletions": 0,
       "date": "2025-09-25"
     },
     "coverage": 100,
