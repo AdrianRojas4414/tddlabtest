@@ -133,17 +133,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c00002b94148bbc2a7ceb5a0f92a2e3f1395b606",
     "author": "Luzhania Cespedes Arancibia",
     "commit": {
       "date": "2025-09-24T19:18:00.000Z",
       "message": "p3",
-      "url": "https://github.com/luzhania/TDD_project_test/commit/HEAD"
+      "url": "https://github.com/luzhania/TDD_project_test/commit/c00002b94148bbc2a7ceb5a0f92a2e3f1395b606"
     },
     "stats": {
       "total": 1,
       "additions": 1,
       "deletions": 0,
+      "date": "2025-09-24"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Luzhania Cespedes Arancibia",
+    "commit": {
+      "date": "2025-09-24T23:51:42.000Z",
+      "message": "prueba6",
+      "url": "https://github.com/luzhania/TDD_project_test/commit/HEAD"
+    },
+    "stats": {
+      "total": 5,
+      "additions": 2,
+      "deletions": 3,
       "date": "2025-09-24"
     },
     "coverage": 100,

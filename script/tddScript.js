@@ -63,16 +63,9 @@ const extractAndAddObject = async (reportFile, tddLogFile, currentTestId) => {
   }
 };
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const inputFilePath = path.join(__dirname, 'report.json');
-const outputFilePath = path.join(__dirname, 'tdd_log.json');
-
-
 const isACommit = (lastEntry) => {
   return lastEntry.hasOwnProperty('commitId');
-}
+};
 
 const getLastTestId = (filePath) => {
   ensureFileExists(filePath, []);
@@ -81,20 +74,23 @@ const getLastTestId = (filePath) => {
   
   if (lastEntry) {
     if (isACommit(lastEntry)) {
-      console.log("El último es un commit");
       return lastEntry.testId + 1; // Si el último es un commit, el próximo testId se incrementa
     } else {
-      console.log("El último no es un commit");
       return lastEntry.hasOwnProperty('testId') ? lastEntry.testId : 0; // Incrementa el testId
     }
   } else {
-    console.log("El último no se encontró");
     return 0; // Si el archivo está vacío, comienza con testId 0
   }
 };
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const inputFilePath = path.join(__dirname, 'report.json');
+const outputFilePath = path.join(__dirname, 'tdd_log.json');
 
 let lastTestId = getLastTestId(outputFilePath);
 
 extractAndAddObject(inputFilePath, outputFilePath, lastTestId);
 
-export { extractAndAddObject };
+export { extractAndAddObject, getLastTestId };
