@@ -38,7 +38,4 @@ const updateJsonFile = (commitId, commitName) => {
 const latestCommitId = getLatestCommitId();
 const latestCommitName = getLatestCommitName();
 
-// const __dirname = path.dirname(__filename);
-// const outputFilePath = path.join(__dirname, 'tdd_log.json');
-// let testId = getLastTestId(outputFilePath);
 updateJsonFile(latestCommitId, latestCommitName);

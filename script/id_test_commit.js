@@ -28,7 +28,7 @@ const getLastTestId = (filePath) => {
   if (lastEntry) {
     if (isACommit(lastEntry)) {
       return lastEntry.testId + 1; // Si el último es un commit, el próximo testId se incrementa
-    } else {
+    } else { //Ejecución de pruebas
       return lastEntry.hasOwnProperty('testId') ? lastEntry.testId : 0; // Incrementa el testId
     }
   } else {
