@@ -240,5 +240,19 @@
     "timestamp": 1759194247356,
     "success": false,
     "testId": 7
+  },
+  {
+    "commitId": "13a2a342fc0fa023893603736bd87b4f64c0b3e6",
+    "commitName": "no pasa la prueba",
+    "commitTimestamp": 1759194270355,
+    "testId": 7
+  },
+  {
+    "numPassedTests": 1,
+    "failedTests": 0,
+    "numTotalTests": 1,
+    "timestamp": 1759194427712,
+    "success": true,
+    "testId": 8
   }
 ]
