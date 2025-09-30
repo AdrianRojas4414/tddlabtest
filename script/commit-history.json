@@ -266,18 +266,37 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "78df51ccc6025a34ad90ae93a7d6e8897cc1865b",
     "author": "BetoHerbas",
     "commit": {
       "date": "2025-09-25T15:08:19.000Z",
       "message": "Test",
-      "url": "https://github.com/luzhania/TDD_project_test/commit/HEAD"
+      "url": "https://github.com/luzhania/TDD_project_test/commit/78df51ccc6025a34ad90ae93a7d6e8897cc1865b"
     },
     "stats": {
       "total": 38,
       "additions": 38,
       "deletions": 0,
       "date": "2025-09-25"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "adrian",
+    "commit": {
+      "date": "2025-09-30T00:19:06.000Z",
+      "message": "ultima prueba",
+      "url": "https://github.com/AdrianRojas4414/tddlabtest/commit/HEAD"
+    },
+    "stats": {
+      "total": 64,
+      "additions": 64,
+      "deletions": 0,
+      "date": "2025-09-30"
     },
     "coverage": 100,
     "test_count": 1,
