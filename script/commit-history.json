@@ -285,12 +285,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4bb12b8e14c3852d202aa7f03145143e03913210",
     "author": "adrian",
     "commit": {
       "date": "2025-09-30T00:19:06.000Z",
       "message": "ultima prueba",
-      "url": "https://github.com/AdrianRojas4414/tddlabtest/commit/HEAD"
+      "url": "https://github.com/AdrianRojas4414/tddlabtest/commit/4bb12b8e14c3852d202aa7f03145143e03913210"
     },
     "stats": {
       "total": 64,
@@ -302,5 +302,24 @@
     "test_count": 1,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "adrian",
+    "commit": {
+      "date": "2025-09-30T00:24:38.000Z",
+      "message": "no pasa",
+      "url": "https://github.com/AdrianRojas4414/tddlabtest/commit/HEAD"
+    },
+    "stats": {
+      "total": 18,
+      "additions": 18,
+      "deletions": 0,
+      "date": "2025-09-30"
+    },
+    "coverage": 100,
+    "test_count": 2,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]
